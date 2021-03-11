@@ -45,14 +45,14 @@ export function activate(context: vscode.ExtensionContext) {
   const barItem: vscode.StatusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right);
   barItem.show();
 
-  const panel = vscode.window.createWebviewPanel('weather', '实时天气', vscode.ViewColumn.One, {});
+  // const panel = vscode.window.createWebviewPanel('weather', '实时天气', vscode.ViewColumn.One, {});
 
   context.subscriptions.push(vscode.commands.registerCommand('weather.watch', async (city: ICity) => {
     if (city?.id) {
       const res = await getWeatherData(city.id);
       if (res.code * 1 === 200) {
         barItem.text = `${city.name} ${res.now.temp}摄氏度`;
-        panel.webview.html = getWebviewContent(city, res);
+        // panel.webview.html = getWebviewContent(city, res);
       }
     }
   }));

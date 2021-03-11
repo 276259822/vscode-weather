@@ -3,7 +3,7 @@
   "displayName": "vscode-weather",
   "publisher": "CooperL",
   "description": "about the weather",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.54.0"
   },
@@ -74,6 +74,7 @@
   "dependencies": {
     "axios": "^0.21.1"
   },
+  "icon": "images/weather.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/276259822/vscode-weather"
